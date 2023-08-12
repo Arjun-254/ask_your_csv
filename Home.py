@@ -20,7 +20,8 @@ def main():
     st.title("Talk to your CSV ")
 
     # Input field for OpenAI API key
-    openai_api_key = st.text_input("Enter your OpenAI API key to proceed:")
+    openai_api_key = st.text_input(
+        "Enter your OpenAI API key to proceed:", type='password')
     if openai_api_key:
         os.environ["OPENAI_API_KEY"] = openai_api_key
 
